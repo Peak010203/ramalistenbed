@@ -87,7 +87,7 @@ async function sendImageByTimestampToLine() {
 }
 
 // รันทุกวันเวลา 18:01 (เวลาไทย) = 11:01 UTC
-cron.schedule('1 11 * * *', () => {
+cron.schedule('* * * * *', () => {
   console.log(`[${new Date().toISOString()}] Running scheduled job...`);
   sendImageByTimestampToLine();
 });
